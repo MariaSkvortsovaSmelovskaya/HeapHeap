@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Metadata.Ecma335;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
@@ -12,18 +13,18 @@ namespace UniversityMinsk
 
         public String FirstName;
         public String LastName;
-        Address address;
+        UniversityMinsk.Address address;
 
-        public Person(String firstName, String lastName, Address address)
+        public Person(String firstName, String lastName, UniversityMinsk.Address address)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
-            this.Address = address;
+            this.address = address;
         }
 
-        public Address GetAddress()
+        public UniversityMinsk.Address getAddress()
         {
-            return this.address();
+            return this.address;
         }
     }
 }
